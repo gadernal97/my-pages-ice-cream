@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+:root{
+    --cor0:#BF0426;
+    --cor1:#590212;
+    --cor2:#E4EDF2;
+    --cor3:#5E8C88;
+    --cor4:#D99255;
+    --fontMenu:'Caveat';
+}
+.menu-wrap .menu{
+  list-style: none;
+  padding: 0px;
+  margin:0px;
+  font-size: 1.7em;
+  width: 100%;
+  font-family: var(--fontMenu);
+}
+.menu-wrap .menu .menu-item{
+    display: inline;
+}
+.menu-wrap .menu .menu-item .menu-item-action{
+    text-decoration: none;
+    color: var(--cor1);
+    padding: 5px 20px;
+    text-transform:uppercase;
+}
+.menu-wrap .menu .menu-item .menu-item-action:hover{
+    color: var(--cor3);
+    border-bottom: var(--cor1) 2px solid;
+    
+}
+@media screen  and (max-width:500px) {
+    .menu-wrap{
+        display: block;
+        width: 98vw;
+        height: 80vh;
+        background-image: linear-gradient(to right,var(--cor0),var(--cor1));
+        margin: 0;
+        font-size: 2rem;
+    }
+    .menu{
+        position:absolute;
+        top:0;
+        left:0;
+        transform:translateX(-100%);
+        transition: tranform 200ms linear;
+    }
+    .menu_open{
+        transform:translateX(0);
+    }
+    .menu-wrap .menu .menu-item{
+        display: block;
+        
+        background-color: var(--cor0);
+        
+    }
+    .btnMenu{
+        display: block;
+        background-repeat: no-repeat;
+        background-position:15px center;
+        
+        
+    }
+    .btnMenu-open{
+        background-image: url('../icon/icons8-menu-50.png');
+        height: 64px;
+        width: 64px;
+    }
+    .btnMenu-close{
+        background-image: url('../icon/icons8-close-64.png');
+        width: 100%;
+        height: 64px;
+        background-color: var(--cor3);
+        cursor: pointer;
+    }
+    header{
+        margin-top: -400px;
+    }
+    
+}
